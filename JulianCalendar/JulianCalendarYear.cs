@@ -6,13 +6,13 @@ namespace JulianCalendar
     public class JulianCalendarYear
     {
         public int Year { get; set; }
-        private ICollection<JulianCalendarMonth> _months;
+        private IDictionary<CalendarMonth, JulianCalendarMonth> _months;
 
         public JulianCalendarYear(int year)
         {
             Year = year;
 
-            _months = new List<JulianCalendarMonth>();
+            _months = new Dictionary<CalendarMonth, JulianCalendarMonth>();
             GenerateMonths();
         }
         
@@ -20,7 +20,7 @@ namespace JulianCalendar
         {
             get
             {
-                return _months;
+                return _months.Values;
             }
         }
 
@@ -28,16 +28,16 @@ namespace JulianCalendar
         {
             _months.Clear();
 
-            for (int monthNumber = 0; monthNumber < 12; monthNumber++)
+            foreach (var monthKey in (CalendarMonth[]) Enum.GetValues(typeof(CalendarMonth)))
             {
                 var month = new JulianCalendarMonth();
-                _months.Add(month);
+                _months.Add(monthKey, month);
             }
         }
 
-        public object Month(Month month)
+        public object Month(CalendarMonth month)
         {
-            throw new NotImplementedException();
+            return _months[month];
         }
     }
 }

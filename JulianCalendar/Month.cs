@@ -4,7 +4,7 @@ using System.Text;
 
 namespace JulianCalendar
 {
-    public enum Month
+    public enum CalendarMonth
     {
         January,
         February,

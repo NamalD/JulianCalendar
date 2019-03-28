@@ -26,7 +26,7 @@ namespace JulianCalendar.Tests
         {
             // Arrange
             const int validYear = 2014;
-            const Month validMonth = Month.January;
+            const CalendarMonth validMonth = CalendarMonth.January;
 
             var calendarYear = RevisedJulianCalendar.Instance.Year(validYear);
 
