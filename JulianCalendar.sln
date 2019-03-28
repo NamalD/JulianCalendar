@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JulianCalendar", "JulianCalendar\JulianCalendar.csproj", "{6605D709-B285-4AF0-ACAA-5B8E711029DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C03FD0FB-695F-4C51-8CA7-0D2C26DC4490}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JulianCalendar.Tests", "JulianCalendar.Tests\JulianCalendar.Tests.csproj", "{F44BADF1-454E-455C-BC8C-7BE9EC9CAB0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6605D709-B285-4AF0-ACAA-5B8E711029DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6605D709-B285-4AF0-ACAA-5B8E711029DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6605D709-B285-4AF0-ACAA-5B8E711029DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6605D709-B285-4AF0-ACAA-5B8E711029DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F44BADF1-454E-455C-BC8C-7BE9EC9CAB0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F44BADF1-454E-455C-BC8C-7BE9EC9CAB0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F44BADF1-454E-455C-BC8C-7BE9EC9CAB0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F44BADF1-454E-455C-BC8C-7BE9EC9CAB0F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F44BADF1-454E-455C-BC8C-7BE9EC9CAB0F} = {C03FD0FB-695F-4C51-8CA7-0D2C26DC4490}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC630599-9247-45CC-A21B-4512A37DEA85}
+	EndGlobalSection
+EndGlobal
