@@ -30,12 +30,12 @@ namespace JulianCalendar
 
             foreach (var monthKey in (CalendarMonth[]) Enum.GetValues(typeof(CalendarMonth)))
             {
-                var month = new JulianCalendarMonth();
+                var month = new JulianCalendarMonth(this, monthKey);
                 _months.Add(monthKey, month);
             }
         }
 
-        public object Month(CalendarMonth month)
+        public JulianCalendarMonth Month(CalendarMonth month)
         {
             return _months[month];
         }
