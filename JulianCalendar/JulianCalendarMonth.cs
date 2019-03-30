@@ -7,12 +7,11 @@ namespace JulianCalendar
     {
         public CalendarMonth Month { get; }
         public JulianCalendarYear Year { get; }
-
-        private IDictionary<int, JulianCalendarDay> _days;
+        public IDictionary<int, JulianCalendarDay> Days { get; }
 
         public JulianCalendarMonth(JulianCalendarYear year, CalendarMonth month)
         {
-            _days = new Dictionary<int, JulianCalendarDay>();
+            Days = new Dictionary<int, JulianCalendarDay>();
 
             Year = year;
             Month = month;
@@ -22,23 +21,23 @@ namespace JulianCalendar
 
         private void GenerateDays()
         {
-            _days.Clear();
+            Days.Clear();
 
             for (int date = 1; date <= 31; date++)
             {
                 var day = new JulianCalendarDay();
-                _days.Add(date, day);
+                Days.Add(date, day);
             }
         }
 
         public JulianCalendarDay Day(int date)
         {
-            if (!_days.ContainsKey(date))
+            if (!Days.ContainsKey(date))
             {
                 throw new ArgumentOutOfRangeException(nameof(date), "Invalid date");
             }
 
-            return _days[date];
+            return Days[date];
         }
     }
 }
